@@ -1,0 +1,17 @@
+# Python / tooling
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Local run outputs (reproducible via run.sh; reports are kept in smoke-test/ and scale-test/)
+out/
+
+# Large local data (downloaded at run time; never committed)
+brreg-enheter.csv
+signalpost-universe.jsonl.gz
+
+# Local test batches (regenerable via select_entry_batch.py)
+smoke-companies.jsonl
+scale300-companies.jsonl
+entry-companies.jsonl

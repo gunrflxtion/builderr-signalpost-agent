@@ -1,0 +1,84 @@
+{
+  "run_id": "smoke-001",
+  "started_at": "2026-11-11T12:02:41.280208Z",
+  "completed_at": "2026-11-11T12:02:41.348119Z",
+  "runtime_ms": 109,
+  "expected_count": 100,
+  "emitted_envelopes": 100,
+  "modules": [
+    "registry",
+    "accounting_obligation",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website",
+    "news",
+    "reviews",
+    "linkedin_profile",
+    "linkedin_jobs",
+    "youtube",
+    "brave_discovery",
+    "synthesis"
+  ],
+  "module_status_counts": {
+    "news": {
+      "not_found": 100
+    },
+    "reviews": {
+      "not_found": 100
+    },
+    "linkedin_profile": {
+      "not_found": 98,
+      "source_error": 1,
+      "available": 1
+    },
+    "linkedin_jobs": {
+      "not_applicable": 99,
+      "not_found": 1
+    },
+    "youtube": {
+      "not_applicable": 100
+    },
+    "brave_discovery": {
+      "not_applicable": 100
+    },
+    "synthesis": {
+      "available": 100
+    }
+  },
+  "observations": {
+    "accepted": 1,
+    "rejected": 0,
+    "rejections": [],
+    "by_platform": {
+      "linkedin": 1
+    }
+  },
+  "coverage": {
+    "companies_with_external_observations": 1,
+    "companies_with_two_or_more_platforms": 0,
+    "companies_with_news": 0,
+    "companies_with_reviews": 0,
+    "companies_with_linkedin": 1,
+    "companies_with_youtube": 0
+  },
+  "operations": {
+    "requests": 801,
+    "request_accounting": "baseline batch requests + one counted attempt per company per connector stage (news, reviews, LinkedIn discovery, LinkedIn jobs company rows, YouTube searches); LinkedIn jobs detail verifications are additional requests inside the jobs stage",
+    "runtime_ms": 109,
+    "third_party_cost_usd": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "exact_expected_count": true,
+      "unique_organisation_numbers": true,
+      "all_entity_states_terminal": true,
+      "all_module_states_terminal": true,
+      "zero_silent_drops": true
+    },
+    "invalid_states": []
+  }
+}
